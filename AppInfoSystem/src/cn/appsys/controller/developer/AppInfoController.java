@@ -128,7 +128,10 @@ public class AppInfoController {
 			currentPageNo = totalPageCount;
 		}
 		try {
-			appInfoList = appInfoService.getAppInfoList(querySoftwareName, queryStatus, queryCategoryLevel1, queryCategoryLevel2, queryCategoryLevel3, queryFlatformId, devId, currentPageNo, pageSize);
+			appInfoList = appInfoService.getAppInfoList(
+					querySoftwareName, queryStatus, queryCategoryLevel1, 
+					queryCategoryLevel2, queryCategoryLevel3, queryFlatformId, 
+					devId, (currentPageNo-1)*pageSize, pageSize);
 			statusList = this.getDataDictionaryList("APP_STATUS");
 			flatFormList = this.getDataDictionaryList("APP_FLATFORM");
 			categoryLevel1List = appCategoryService.getAppCategoryListByParentId(null);

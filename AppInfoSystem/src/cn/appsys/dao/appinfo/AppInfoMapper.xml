@@ -59,22 +59,22 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="softwareName != null and softwareName != ''">
 				and a.softwareName like CONCAT ('%',#{softwareName},'%')
 			</if>
-			<if test="status != null">
+			<if test="status != null and status != ''">
 				and a.status = #{status}
 			</if>
-			<if test="categoryLevel1 != null">
+			<if test="categoryLevel1 != null and categoryLevel1 != ''">
 				and a.categoryLevel1 = #{categoryLevel1}
 			</if>
-			<if test="categoryLevel2 != null">
+			<if test="categoryLevel2 != null and categoryLevel2 != ''">
 				and a.categoryLevel2 = #{categoryLevel2}
 			</if>
-			<if test="categoryLevel3 != null">
+			<if test="categoryLevel3 != null and categoryLevel3 != ''">
 				and a.categoryLevel3 = #{categoryLevel3}
 			</if>
-			<if test="flatformId != null">
+			<if test="flatformId != null and flatformId != ''">
 				and a.flatformId = #{flatformId}
 			</if>
-			<if test="devId != null">
+			<if test="devId != null and devId != ''">
 				and a.devId = #{devId}
 			</if>
 		</trim>
