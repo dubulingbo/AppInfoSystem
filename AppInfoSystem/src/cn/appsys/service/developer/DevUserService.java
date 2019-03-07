@@ -4,10 +4,10 @@ import cn.appsys.pojo.DevUser;
 
 public interface DevUserService {
 	/**
-	 * 用户登录
+	 * 登录验证
 	 * @param devCode
-	 * @param devPassword
+	 * @param password
 	 * @return
 	 */
-	public DevUser login(String devCode,String devPassword) throws Exception;
+	public DevUser login(String devCode,String password);
 }

@@ -1,14 +1,14 @@
 package cn.appsys.dao.devuser;
 
 import org.apache.ibatis.annotations.Param;
+
 import cn.appsys.pojo.DevUser;
 
 public interface DevUserMapper {
 	/**
-	 * 通过userCode获取User
-	 * @param userCode
+	 * 根据 devCode 获取用户记录
+	 * @param devCode
 	 * @return
-	 * @throws Exception
 	 */
-	public DevUser getLoginUser(@Param("devCode")String devCode)throws Exception;
+	public DevUser getLoginUser(@Param("devCode")String devCode);
 }

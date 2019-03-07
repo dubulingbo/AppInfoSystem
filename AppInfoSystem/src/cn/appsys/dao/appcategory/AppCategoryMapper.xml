@@ -10,8 +10,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			<if test="parentId != null">
 				and parentId = #{parentId}
 			</if>
-			<if test="parentId == null">
-				and parentId is null
+			<if test="parentId == null"> <!-- 如果为null，则获取一级分类列表 -->
+				and parentId is null  
 			</if>
 		</trim>
 	</select>
